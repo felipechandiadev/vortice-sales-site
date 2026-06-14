@@ -1,0 +1,347 @@
+/* Vite site: minimal hooks for React markup not present in Presentacion_V1.html */
+
+#flujo:before {
+  content: '';
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  right: 4vw;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background:
+    repeating-radial-gradient(circle, rgba(0, 209, 255, 0.1) 0 1px, transparent 2px 18px),
+    conic-gradient(
+      from 0deg,
+      transparent,
+      rgba(0, 209, 255, 0.12),
+      transparent,
+      rgba(123, 44, 245, 0.12),
+      transparent
+    );
+  mask: radial-gradient(circle, transparent 0 90px, black 92px, transparent 72%);
+  opacity: 0.34;
+  animation: sectionOrbit 22s linear infinite;
+  pointer-events: none;
+}
+
+.ecosystemDiagramMount {
+  margin-top: 34px;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.logoBox img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero .logoBox img {
+  position: relative;
+  z-index: 2;
+  transform-origin: center;
+  animation: vLogoCleanSvg 3.2s cubic-bezier(0.16, 1, 0.3, 1) 0.25s forwards !important;
+}
+
+@keyframes orbitSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.bulletList {
+  margin: 16px 0 0;
+  padding-left: 1.2rem;
+  color: var(--muted);
+  font-size: clamp(1.02rem, 1.45vw, 1.28rem);
+  line-height: 1.75;
+}
+
+.eyebrow {
+  font-size: clamp(1.05rem, 1.9vw, 1.45rem);
+  letter-spacing: 0.32em;
+  font-weight: 600;
+}
+
+.bulletList li + li {
+  margin-top: 14px;
+}
+
+.numberedList {
+  margin: 0;
+  padding-left: 1.4rem;
+  color: var(--muted);
+  font-size: clamp(1.02rem, 1.45vw, 1.28rem);
+  line-height: 1.75;
+}
+
+.numberedList li + li {
+  margin-top: 14px;
+}
+
+#concepto-clave {
+  text-align: center;
+  justify-content: center;
+}
+
+#concepto-clave .conceptStatement {
+  margin: 0 auto;
+  max-width: 1080px;
+  font-size: clamp(1.33rem, 3.33vw, 2.8rem);
+  line-height: 1.28;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+.benefitNum {
+  font-size: 0.72rem;
+  letter-spacing: 0.35em;
+  color: var(--cyan);
+  margin-bottom: 12px;
+  display: block;
+}
+
+.listItem span {
+  color: var(--muted);
+}
+
+.listItem b {
+  color: #fff;
+  font-weight: 600;
+  text-align: right;
+}
+
+.listItemHeader {
+  margin-top: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.listItemHeader span,
+.listItemHeader b {
+  color: var(--cyan);
+  font-size: 0.78rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.module small {
+  display: block;
+  margin-top: 12px;
+  color: var(--cyan);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* React map uses pins/orbits; HTML hides them in favor of constellation SVG */
+#gemelo .map > .pin,
+#gemelo .map > .orbit {
+  display: block !important;
+}
+
+/* #lira — phone mockup + editorial column (Presentacion_V1.html), markup unchanged */
+#lira .reveal {
+  display: grid;
+  grid-template-columns: minmax(0, 390px) minmax(0, 1fr);
+  gap: clamp(28px, 4vw, 56px);
+  align-items: center;
+}
+
+#lira .eyebrow {
+  grid-column: 2;
+  grid-row: 1;
+  margin-bottom: 12px;
+}
+
+#lira .grid.two {
+  display: contents;
+}
+
+#lira .grid.two > .card.lira {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  position: relative;
+  width: min(390px, 100%);
+  min-height: 720px;
+  margin: 0 auto;
+  padding: 82px 38px 38px;
+  border-radius: 58px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.45)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.45)),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.035) 18%, rgba(0, 0, 0, 0.55) 70%),
+    linear-gradient(180deg, #1b2438, #05070d);
+  background-size:
+    4px 72px,
+    4px 92px,
+    100% 100%,
+    100% 100%;
+  background-position:
+    -4px 150px,
+    calc(100% + 0px) 205px,
+    0 0,
+    0 0;
+  background-repeat: no-repeat;
+  box-shadow:
+    0 45px 120px rgba(0, 0, 0, 0.6),
+    inset 0 0 0 2px rgba(255, 255, 255, 0.1),
+    inset 0 0 0 8px rgba(0, 0, 0, 0.8);
+  backdrop-filter: none;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  overflow: visible;
+}
+
+#lira .grid.two > .card.lira::before {
+  content: '';
+  position: absolute;
+  inset: 14px;
+  border-radius: 48px;
+  background:
+    radial-gradient(circle at 76% 8%, rgba(0, 209, 255, 0.2), transparent 24%),
+    radial-gradient(circle at 20% 28%, rgba(123, 44, 245, 0.24), transparent 28%),
+    linear-gradient(180deg, #0b1630 0%, #071020 48%, #05070d 100%);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.06),
+    inset 0 -40px 80px rgba(0, 0, 0, 0.3);
+  z-index: 0;
+  pointer-events: none;
+}
+
+#lira .grid.two > .card.lira::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 18px;
+  transform: translateX(-50%);
+  width: 126px;
+  height: 36px;
+  border-radius: 999px;
+  background: #02040a;
+  z-index: 5;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.08),
+    0 4px 16px rgba(0, 0, 0, 0.55);
+  pointer-events: none;
+}
+
+#lira .grid.two > .card.lira h3,
+#lira .grid.two > .card.lira p {
+  position: relative;
+  z-index: 1;
+}
+
+#lira .grid.two > .card.lira h3 {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 0;
+  padding: 16px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.22);
+  font-size: 1.42rem;
+  letter-spacing: 0;
+  text-transform: none;
+  color: #fff;
+}
+
+#lira .grid.two > .card.lira h3::before {
+  content: '';
+  width: 72px;
+  height: 72px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 209, 255, 0.55);
+  background:
+    radial-gradient(circle, rgba(0, 209, 255, 0.16), rgba(123, 44, 245, 0.1)),
+    linear-gradient(135deg, rgba(0, 209, 255, 0.35), rgba(123, 44, 245, 0.35));
+  mask: url('/lira.svg') center / 58% no-repeat;
+  -webkit-mask: url('/lira.svg') center / 58% no-repeat;
+  filter: drop-shadow(0 0 18px rgba(0, 209, 255, 0.42)) drop-shadow(0 0 28px rgba(123, 44, 245, 0.22));
+  animation: liraBreath 3.8s ease-in-out infinite;
+}
+
+#lira .grid.two > .card.lira h3::after {
+  content: '';
+  position: absolute;
+  left: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 56px;
+  height: 56px;
+  border-radius: 24px;
+  background: radial-gradient(circle, rgba(0, 209, 255, 0.12), transparent 62%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+#lira .grid.two > .card.lira p {
+  margin: 0;
+  padding: 22px;
+  border-radius: 26px;
+  border: 1px solid rgba(0, 209, 255, 0.32);
+  background:
+    linear-gradient(135deg, rgba(0, 209, 255, 0.14), rgba(123, 44, 245, 0.13)),
+    rgba(255, 255, 255, 0.055);
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.28);
+  color: #d9e2ff;
+  line-height: 1.65;
+  font-size: clamp(1rem, 1.35vw, 1.08rem);
+}
+
+#lira .grid.two > .card:not(.lira) {
+  grid-column: 2;
+  grid-row: 2;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+#lira .grid.two > .card:not(.lira) h3 {
+  margin: 0 0 18px;
+  font-size: clamp(1.75rem, 3vw, 2.35rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #fff;
+  text-transform: none;
+}
+
+#lira .grid.two > .card:not(.lira) p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.75;
+  font-size: clamp(1.02rem, 1.45vw, 1.28rem);
+}
+
+@media (max-width: 900px) {
+  #lira .reveal {
+    grid-template-columns: 1fr;
+  }
+
+  #lira .eyebrow {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  #lira .grid.two > .card.lira {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  #lira .grid.two > .card:not(.lira) {
+    grid-column: 1;
+    grid-row: 3;
+  }
+}
