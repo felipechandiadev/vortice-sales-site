@@ -211,7 +211,7 @@ export const COMPARE_ROWS: CompareRow[] = [
   },
   { before: 'Acciones sin evidencia de impacto', after: 'Seguimiento territorial antes/después' },
   { before: 'Comunicación genérica', after: 'Campañas y alertas por sector' },
-  { before: 'Informes tardíos', after: 'Tableros ejecutivos y asistente LIRA en tiempo casi real' },
+  { before: 'Informes tardíos', after: 'Tableros ejecutivos y asistente LIRA en tiempo real' },
   { before: 'Dificultad para explicar “por qué aquí”', after: 'Mapa, índices y trazabilidad por territorio' },
 ];
 
