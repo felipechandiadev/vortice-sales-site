@@ -12,10 +12,15 @@
   --white:#ffffff;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{
+  scroll-behavior:smooth;
+  background:#050816;
+  min-height:100%;
+}
 body{
   margin:0;
   font-family: Montserrat, Inter, Segoe UI, Arial, sans-serif;
+  background-color:#050816;
   background:
     radial-gradient(circle at 15% 10%, rgba(0,209,255,.20), transparent 28%),
     radial-gradient(circle at 85% 15%, rgba(123,44,245,.26), transparent 30%),
@@ -650,9 +655,9 @@ footer{padding:50px 8vw;color:var(--muted);text-align:center;border-top:1px soli
 
 /* Fondo tecnológico Vórtice: territorio + datos + movimiento */
 .territoryBg{
-  position:fixed;
+  position:absolute;
   inset:0;
-  z-index:-2;
+  z-index:0;
   overflow:hidden;
   pointer-events:none;
   background:
@@ -695,18 +700,18 @@ footer{padding:50px 8vw;color:var(--muted);text-align:center;border-top:1px soli
   50%{opacity:.86; transform:scale(1.018)}
 }
 .dataCanvas{
-  position:fixed;
+  position:absolute;
   inset:0;
   width:100%;
   height:100%;
-  z-index:-1;
+  z-index:1;
   pointer-events:none;
   opacity:.72;
 }
 .holoScan{
-  position:fixed;
+  position:absolute;
   inset:-30%;
-  z-index:-1;
+  z-index:2;
   pointer-events:none;
   background:linear-gradient(115deg, transparent 42%, rgba(0,209,255,.09) 49%, rgba(123,44,245,.08) 52%, transparent 60%);
   animation:holoSweep 8s linear infinite;

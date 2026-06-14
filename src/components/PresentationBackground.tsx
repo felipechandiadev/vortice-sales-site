@@ -1,7 +1,7 @@
 export function PresentationBackground() {
   return (
-    <>
-      <div className="territoryBg" aria-hidden="true" />
+    <div className="presentationBackdrop" aria-hidden="true">
+      <div className="territoryBg" />
       <svg
         className="dataCanvas"
         viewBox="0 0 1200 800"
@@ -49,7 +49,7 @@ export function PresentationBackground() {
           <circle className="pulseDot d4" r="4" />
         </g>
       </svg>
-      <div className="holoScan" aria-hidden="true" />
-    </>
+      <div className="holoScan" />
+    </div>
   );
 }
